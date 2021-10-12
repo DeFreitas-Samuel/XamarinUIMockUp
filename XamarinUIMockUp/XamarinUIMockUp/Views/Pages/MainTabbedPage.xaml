@@ -7,8 +7,6 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="DarkGray"
             android:TabbedPage.BarSelectedItemColor="Gray"
-            android:TabbedPage.OffscreenPageLimit="2"
-            android:TabbedPage.IsSwipePagingEnabled="true"
             BarBackgroundColor="White">
     <TabbedPage.Children>
         <views:HomePage/>

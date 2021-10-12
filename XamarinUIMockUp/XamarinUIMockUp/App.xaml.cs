@@ -4,6 +4,7 @@ using Prism.Unity;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinUIMockUp.ViewModels;
 using XamarinUIMockUp.Views.Pages;
 
 namespace XamarinUIMockUp
@@ -25,6 +26,7 @@ namespace XamarinUIMockUp
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<MainTabbedPage>("MainTab");
+            containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
         }
     }
 }

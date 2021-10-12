@@ -4,7 +4,7 @@ using Prism.Unity;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XamarinUIMockUp.Views;
+using XamarinUIMockUp.Views.Pages;
 
 namespace XamarinUIMockUp
 {

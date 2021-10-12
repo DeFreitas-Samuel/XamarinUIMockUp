@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinUIMockUp.Views.Pages.HomePage"
+             xmlns:views="clr-namespace:XamarinUIMockUp.Views"
+             Title="Home"
+             IconImageSource="houseIcon">
+    <Grid   RowDefinitions="6*, 19*, 6*, 48*, 5*, 32*"
+            ColumnDefinitions="1*, 1*, 1*, 1*"
+            ColumnSpacing="35"
+
+            Margin="15,20,15,0">
+        <Label Text="Quick Help"
+               FontSize="Large"
+               FontAttributes="Bold"
+               Grid.ColumnSpan="3"
+               HorizontalOptions="Start"/>
+        <Image Source="searchIcon"
+               Grid.Row="0"
+               Grid.Column="3"
+               VerticalOptions="Start"
+               />
+        <views:ButtonView Grid.Column="0"
+                          Grid.Row="1"/>
+        <views:ButtonView Grid.Column="1"
+                          Grid.Row="1"/>
+        <views:ButtonView Grid.Column="2"
+                          Grid.Row="1"/>
+        <views:ButtonView Grid.Column="3"
+                          Grid.Row="1"/>
+        <Label Text="Daily Meditations"
+               Grid.Row="2"
+               Grid.ColumnSpan="4"
+               FontSize="Large"
+               FontAttributes="Bold"/>
+        <Image Source="relaxImage"
+               Grid.Row="3"
+               Grid.ColumnSpan="4"
+               Aspect="Fill"/>
+
+        <Label Text="New Music"
+               FontSize="Large"
+               FontAttributes="Bold"
+               Grid.Row="4"
+               Grid.ColumnSpan="3"/>
+        <Label Text="View All"
+               Grid.Row="4"
+               Grid.Column="3"
+               VerticalOptions="End"
+               />
+    </Grid>
+</ContentPage>

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinUIMockUp.Views
+namespace XamarinUIMockUp.Views.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class MainTabbedPage : TabbedPage
     {
-        public HomePage()
+        public MainTabbedPage()
         {
             InitializeComponent();
         }

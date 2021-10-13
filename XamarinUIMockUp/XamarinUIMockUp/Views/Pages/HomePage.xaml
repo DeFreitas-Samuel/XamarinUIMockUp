@@ -4,9 +4,11 @@
              x:Class="XamarinUIMockUp.Views.Pages.HomePage"
              xmlns:views="clr-namespace:XamarinUIMockUp.Views"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              Title="Home"
              IconImageSource="houseIcon">
-    <Grid   RowDefinitions="10*, 26*, 10*, 48*, 10*, 32*"
+    
+    <Grid   RowDefinitions="10*, 26*, 10*, 40*, 7*, 42*"
             ColumnDefinitions="1*, 1*, 1*, 1*"
             ColumnSpacing="35"
 
@@ -25,6 +27,7 @@
                />
         <views:ButtonView Grid.Column="0"
                           Grid.Row="1"/>
+
         <views:ButtonView Grid.Column="1"
                           Grid.Row="1"/>
         <views:ButtonView Grid.Column="2"
@@ -59,40 +62,45 @@
                         >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid 
-                          Padding="5,0">
+                    <Grid Padding="10,0,5,10">
+                        <pancake:PancakeView>
+                            <pancake:PancakeView.Shadow>
+                                <pancake:DropShadow Color="DarkGray" Offset="5,5"  />
+                            </pancake:PancakeView.Shadow>
+                        </pancake:PancakeView>
                         <Frame  VerticalOptions="Center"
-                                CornerRadius="10" IsClippedToBounds="True" 
-                                HeightRequest="150" 
-                                WidthRequest="116"
-                                Padding="0"
-                                Grid.Row="0"
-                                Grid.Column="0">
+                                    CornerRadius="10" 
+                                    IsClippedToBounds="True" 
+                                    HeightRequest="150" 
+                                    WidthRequest="116"
+                                    Padding="0"
+                                    Grid.Row="0"
+                                    Grid.Column="0">
                             <Image  Source="relaxImage"
-                                    VerticalOptions="FillAndExpand" 
-                                    HorizontalOptions="FillAndExpand"
-                                    HeightRequest="70" 
-                                    WidthRequest="70"
-                                    Aspect="AspectFill"/>
+                                        VerticalOptions="FillAndExpand" 
+                                        HorizontalOptions="FillAndExpand"
+                                        HeightRequest="70" 
+                                        WidthRequest="70"
+                                        Aspect="AspectFill"/>
                         </Frame>
                         <Grid android:VisualElement.Elevation="10"
-                              Grid.Row="0"
-                              Grid.Column="0"
-                              VerticalOptions="End"
-                              HorizontalOptions="Fill"
-                              >
+                                  Grid.Row="0"
+                                  Grid.Column="0"
+                                  VerticalOptions="End"
+                                  HorizontalOptions="Fill"
+                                  >
                             <BoxView Color="White"
-                                     Grid.Row="0"
-                                     Grid.Column="0"
-                                     WidthRequest="116"
-                                     HeightRequest="50"/>
+                                         Grid.Row="0"
+                                         Grid.Column="0"
+                                         WidthRequest="116"
+                                         HeightRequest="50"/>
                             <Label Text="Hola"
-                                   FontSize="Medium"
-                                   FontAttributes="Bold"
-                                   Padding="5"/>
+                                       FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       Padding="5"/>
                             <Label Text="&#x1F551; 5 min"
-                                   VerticalOptions="End"
-                                   Padding="5"/>
+                                       VerticalOptions="End"
+                                       Padding="5"/>
                         </Grid>
                     </Grid>
                 </DataTemplate>

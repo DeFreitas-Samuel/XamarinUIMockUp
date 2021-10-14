@@ -14,7 +14,7 @@
             ColumnSpacing="35"
 
             Margin="15,20,15,0">
-        <Label Text="Categories"
+        <Label Text="{Binding Categories}"
                FontSize="Large"
                FontAttributes="Bold"
                Grid.ColumnSpan="3"
@@ -38,7 +38,7 @@
         <views:ButtonView Grid.Column="3"
                           Grid.Row="1"
                           BindingContext="{Binding CustomButtonData4}"/>
-        <Label Text="Daily Recommendation"
+        <Label Text="{Binding DailyRecommendation}"
                Grid.Row="2"
                Grid.ColumnSpan="4"
                FontSize="Large"
@@ -56,16 +56,16 @@
                 Grid.Row="3"
                 Grid.ColumnSpan="4"
                 TextColor="White"
-                Text="Terminator 2"
+                Text="{Binding Terminator2}"
                 FontSize="Large"
                 Margin="20"
                 FontAttributes="Bold"/>
-        <Label Text="New Movies"
+        <Label Text="{Binding NewMovies}"
                FontSize="Large"
                FontAttributes="Bold"
                Grid.Row="4"
                Grid.ColumnSpan="3"/>
-        <Label Text="View All"
+        <Label Text="{Binding ViewAll}"
                Grid.Row="4"
                Grid.Column="3"
                VerticalOptions="Center"

@@ -15,6 +15,11 @@ namespace XamarinUIMockUp.ViewModels
         public CustomButtonData CustomButtonData2 { get; }
         public CustomButtonData CustomButtonData3 { get; }
         public CustomButtonData CustomButtonData4 { get; }
+        public string Categories {get;} = "Categories";
+        public string DailyRecommendation { get; } = "Daily Recommendation";
+        public string NewMovies { get; } = "New Movies";
+        public string ViewAll { get; } = "View All";
+        public string Terminator2 { get; } = "Terminator2";
         public ICommand DetailCommand { get; }
         private MenuItem _selectedItem;
         public MenuItem SelectedItem

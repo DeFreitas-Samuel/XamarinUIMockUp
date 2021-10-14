@@ -6,7 +6,8 @@
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              Title="Home"
-             IconImageSource="houseIcon">
+             IconImageSource="houseIcon"
+             NavigationPage.HasNavigationBar="false">
     
     <Grid   RowDefinitions="10*, 26*, 10*, 40*, 7*, 42*"
             ColumnDefinitions="1*, 1*, 1*, 1*"
@@ -44,7 +45,6 @@
                Grid.ColumnSpan="4"
                Aspect="Fill"
                Margin="15,0"/>
-
         <Label Text="New Music"
                FontSize="Large"
                FontAttributes="Bold"
@@ -59,7 +59,8 @@
                         Grid.ColumnSpan="4"
                         ItemsSource="{Binding dummyList}"
                         ItemsLayout="HorizontalList"
-                        >
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedItem}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10,0,5,10">

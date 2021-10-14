@@ -7,7 +7,8 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="DarkGray"
             android:TabbedPage.BarSelectedItemColor="Gray"
-            BarBackgroundColor="White">
+            BarBackgroundColor="White"
+            NavigationPage.HasNavigationBar="false">
     <TabbedPage.Children>
         <views:HomePage/>
         <views:ProfilePage/>

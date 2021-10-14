@@ -4,6 +4,14 @@
              x:Class="XamarinUIMockUp.App"
              xmlns:prism="http://prismlibrary.com">
     <Application.Resources>
+       
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#00cfbe"/>
+                <Setter Property="BarTextColor" Value="White"   />
+
+            </Style>
+        </ResourceDictionary>
 
     </Application.Resources>
 </prism:PrismApplication>

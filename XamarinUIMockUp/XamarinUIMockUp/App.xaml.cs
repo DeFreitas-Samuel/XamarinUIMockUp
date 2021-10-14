@@ -19,14 +19,16 @@ namespace XamarinUIMockUp
 
         protected override void OnInitialized()
         {
-            NavigationService.NavigateAsync("MainTab");
+            NavigationService.NavigateAsync("NavigationPage/MainTab");
         }
 
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainTabbedPage>("MainTab");
             containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
+            containerRegistry.RegisterForNavigation<DetailPage, DetailViewModel>();
         }
     }
 }

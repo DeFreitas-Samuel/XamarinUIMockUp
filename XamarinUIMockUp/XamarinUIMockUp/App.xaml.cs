@@ -19,7 +19,7 @@ namespace XamarinUIMockUp
 
         protected override void OnInitialized()
         {
-            NavigationService.NavigateAsync("NavigationPage/MainTab");
+            NavigationService.NavigateAsync(NavigationConstants.Paths.MainTabbed);
         }
 
 

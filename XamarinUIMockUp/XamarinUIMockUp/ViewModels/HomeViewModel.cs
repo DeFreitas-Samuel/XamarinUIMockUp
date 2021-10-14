@@ -11,6 +11,10 @@ namespace XamarinUIMockUp.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
+        public CustomButtonData CustomButtonData1 { get; }
+        public CustomButtonData CustomButtonData2 { get; }
+        public CustomButtonData CustomButtonData3 { get; }
+        public CustomButtonData CustomButtonData4 { get; }
         public ICommand DetailCommand { get; }
         private MenuItem _selectedItem;
         public MenuItem SelectedItem
@@ -33,8 +37,19 @@ namespace XamarinUIMockUp.ViewModels
 
         public HomeViewModel(INavigationService navigationService) : base(navigationService)
         {
-            MenuList = new ObservableCollection<MenuItem>();
-            MenuList.Add(new MenuItem("Iron Man", "\U0001F552 2 hours", "ironmanPoster.jpg"));
+            CustomButtonData1 = new CustomButtonData("Action", "actionIcon");
+            CustomButtonData2 = new CustomButtonData("Drama", "dramaIcon");
+            CustomButtonData3 = new CustomButtonData("Romance", "romanceIcon");
+            CustomButtonData4 = new CustomButtonData("Horror", "horrorIcon");
+            MenuList = new ObservableCollection<MenuItem>
+            {
+                new MenuItem("Iron Man", "\U0001F552 122 minutes", "ironmanPoster.jpg"),
+                new MenuItem("Pirates of the Caribbean", "\U0001F552 90 minutes", "piratesPoster.jpg"),
+                new MenuItem("Batman", "\U0001F552 136 minutes", "batmanPoster.jpg"),
+                new MenuItem("Lord of the Ring", "\U0001F552 126 minutes", "lordOfTheRingPoster.jpg"),
+                new MenuItem("Spider-man Into The Spiderverse", "\U0001F552 96 minutes", "spidermanPoster.jpg")
+            };
+
             DetailCommand = new DelegateCommand(OnDetailRequested);
 
         }
@@ -43,7 +58,7 @@ namespace XamarinUIMockUp.ViewModels
         {
             var parameter = new NavigationParameters();
             parameter.Add("SelectedItemMenu", SelectedItem);
-            NavigationService.NavigateAsync("DetailPage", parameter);
+            NavigationService.NavigateAsync(NavigationConstants.Paths.Detail, parameter);
             SelectedItem = null;
         }
 

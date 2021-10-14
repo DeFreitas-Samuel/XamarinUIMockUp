@@ -7,7 +7,7 @@
        
         <ResourceDictionary>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#00cfbe"/>
+                <Setter Property="BarBackgroundColor" Value="#414048"/>
                 <Setter Property="BarTextColor" Value="White"   />
 
             </Style>

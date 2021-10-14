@@ -27,14 +27,17 @@
                Margin="7"
                />
         <views:ButtonView Grid.Column="0"
-                          Grid.Row="1"/>
-
+                          Grid.Row="1"
+                          BindingContext="{Binding CustomButtonData1}"/>
         <views:ButtonView Grid.Column="1"
-                          Grid.Row="1"/>
+                          Grid.Row="1"
+                          BindingContext="{Binding CustomButtonData2}"/>
         <views:ButtonView Grid.Column="2"
-                          Grid.Row="1"/>
+                          Grid.Row="1"
+                          BindingContext="{Binding CustomButtonData3}"/>
         <views:ButtonView Grid.Column="3"
-                          Grid.Row="1"/>
+                          Grid.Row="1"
+                          BindingContext="{Binding CustomButtonData4}"/>
         <Label Text="Daily Recommendation"
                Grid.Row="2"
                Grid.ColumnSpan="4"
@@ -75,7 +78,7 @@
                         SelectedItem="{Binding SelectedItem}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10,0,5,10">
+                    <Grid Padding="10,0,0,10">
                         <pancake:PancakeView>
                             <pancake:PancakeView.Shadow>
                                 <pancake:DropShadow Color="DarkGray" Offset="5,5"  />
@@ -90,11 +93,9 @@
                                     Grid.Row="0"
                                     Grid.Column="0">
                             <Image  Source="{Binding Image}"
-                                        VerticalOptions="FillAndExpand" 
-                                        HorizontalOptions="FillAndExpand"
                                         HeightRequest="70" 
                                         WidthRequest="70"
-                                        Aspect="AspectFill"/>
+                                        Aspect="Fill"/>
                         </Frame>
                         <Grid android:VisualElement.Elevation="10"
                                   Grid.Row="0"
@@ -108,6 +109,8 @@
                                          WidthRequest="116"
                                          HeightRequest="50"/>
                             <Label Text="{Binding Title}"
+                                   LineBreakMode="TailTruncation"
+                                   WidthRequest="50"
                                        FontSize="Medium"
                                        FontAttributes="Bold"
                                        Padding="5"/>

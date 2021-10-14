@@ -2,14 +2,14 @@
 <StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinUIMockUp.Views.ButtonView">
-    <ImageButton Source ="breezeIcon"
+    <ImageButton Source ="{Binding Image}"
                      Padding="15"
                      CornerRadius="15"
                      Grid.Row="1"
                      Grid.Column="0"
                      BackgroundColor="White"
             />
-    <Label Text="Breathe"
+    <Label Text="{Binding CategoryName}"
            HorizontalTextAlignment="Center"
            FontSize="Small"
            TextColor="Black"/>

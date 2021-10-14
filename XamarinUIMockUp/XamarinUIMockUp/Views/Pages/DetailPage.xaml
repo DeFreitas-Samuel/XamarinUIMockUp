@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinUIMockUp.Views.Pages.DetailPage">
     <NavigationPage.TitleView>
-        <Label Text="My App" VerticalTextAlignment="Center"
+        <Label Text="{Binding Title}" VerticalTextAlignment="Center"
                FontSize="Large"
                TextColor="White"/>
     </NavigationPage.TitleView>
@@ -11,27 +11,38 @@
         <Grid RowDefinitions="10*, 2.3*,2*,10*"
               ColumnDefinitions="*,*,*"
               BackgroundColor="#e8f3f4">
-            <Image Source="relaxImage"
+            <Image Source="{Binding Image}"
                    Aspect="AspectFill"
                    Grid.ColumnSpan="3"/>
-            <ImageButton Grid.Row="1"
-                         Margin="-12"/>
-            <ImageButton Grid.Row="1"
-                         Margin="-12"
-                         Grid.Column="1"/>
-            <ImageButton Grid.Row="1"
-                         Margin="-12"
-                         Grid.Column="2"/>
-            <Label Text="Hello"
+            <Frame Grid.Row="1"
+                   BackgroundColor="LightGray"
+                   Margin="0,-6">
+                <Image Source="shareIcon"/>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="1"
+                   BackgroundColor="LightGray"
+                   Margin="-6">
+                <Image Source="playIcon"/>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="2"
+                   BackgroundColor="LightGray"
+                   Margin="-6">
+                <Image Source="plusIcon"/>
+            </Frame>
+
+            <Label Text="{Binding TimeRequired}"
                    Grid.Row="2"
                    Margin="20,20,0,0"
                    FontSize="Large"
                    Grid.ColumnSpan="3"
                    TextColor="#00cfbe"/>
-            <Label Text="ffffffff"
+            <Label Text="{Binding Description}"
                    Margin="20,20,0,0"
                    FontSize="Medium"
-                   Grid.Row="3"/>
+                   Grid.Row="3"
+                   Grid.ColumnSpan="3"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

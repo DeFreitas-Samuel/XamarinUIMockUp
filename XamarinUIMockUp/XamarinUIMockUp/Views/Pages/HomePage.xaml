@@ -14,7 +14,7 @@
             ColumnSpacing="35"
 
             Margin="15,20,15,0">
-        <Label Text="Quick Help"
+        <Label Text="Categories"
                FontSize="Large"
                FontAttributes="Bold"
                Grid.ColumnSpan="3"
@@ -35,17 +35,29 @@
                           Grid.Row="1"/>
         <views:ButtonView Grid.Column="3"
                           Grid.Row="1"/>
-        <Label Text="Daily Meditations"
+        <Label Text="Daily Recommendation"
                Grid.Row="2"
                Grid.ColumnSpan="4"
                FontSize="Large"
                FontAttributes="Bold"/>
-        <Image Source="relaxImage"
-               Grid.Row="3"
-               Grid.ColumnSpan="4"
-               Aspect="Fill"
-               Margin="15,0"/>
-        <Label Text="New Music"
+        <Frame  VerticalOptions="Center"
+                CornerRadius="10" 
+                IsClippedToBounds="True" 
+                Grid.Row="3"
+                Grid.ColumnSpan="4"
+                Padding="0">
+            <Image Source="terminatorImage.jpg"
+               Aspect="Fill"/>
+        </Frame>
+        <Label  VerticalOptions="End"
+                Grid.Row="3"
+                Grid.ColumnSpan="4"
+                TextColor="White"
+                Text="Terminator 2"
+                FontSize="Large"
+                Margin="20"
+                FontAttributes="Bold"/>
+        <Label Text="New Movies"
                FontSize="Large"
                FontAttributes="Bold"
                Grid.Row="4"
@@ -57,7 +69,7 @@
                />
         <CollectionView Grid.Row="5"
                         Grid.ColumnSpan="4"
-                        ItemsSource="{Binding dummyList}"
+                        ItemsSource="{Binding MenuList}"
                         ItemsLayout="HorizontalList"
                         SelectionMode="Single"
                         SelectedItem="{Binding SelectedItem}">
@@ -77,7 +89,7 @@
                                     Padding="0"
                                     Grid.Row="0"
                                     Grid.Column="0">
-                            <Image  Source="relaxImage"
+                            <Image  Source="{Binding Image}"
                                         VerticalOptions="FillAndExpand" 
                                         HorizontalOptions="FillAndExpand"
                                         HeightRequest="70" 
@@ -95,11 +107,11 @@
                                          Grid.Column="0"
                                          WidthRequest="116"
                                          HeightRequest="50"/>
-                            <Label Text="Hola"
+                            <Label Text="{Binding Title}"
                                        FontSize="Medium"
                                        FontAttributes="Bold"
                                        Padding="5"/>
-                            <Label Text="&#x1F551; 5 min"
+                            <Label Text="{Binding TimeRequired}"
                                        VerticalOptions="End"
                                        Padding="5"/>
                         </Grid>

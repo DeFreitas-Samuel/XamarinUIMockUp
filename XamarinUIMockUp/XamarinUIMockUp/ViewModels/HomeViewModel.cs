@@ -5,36 +5,15 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
+using XamarinUIMockUp.Models;
 
 namespace XamarinUIMockUp.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        public HomeViewModel(INavigationService navigationService) : base(navigationService)
-        {
-            dummyList = new ObservableCollection<string>() 
-            { 
-                "Helllo",
-                "d",
-                "f",
-                "d",
-                "ss",
-                "as"
-            };
-            DetailCommand = new DelegateCommand(OnDetailRequested);
-
-        }
-
-        private void OnDetailRequested()
-        {
-            NavigationService.NavigateAsync("DetailPage");
-            SelectedItem = null;
-        }
-
         public ICommand DetailCommand { get; }
-        public ObservableCollection<string> dummyList { get; set; }
-        private object _selectedItem;
-        public object SelectedItem 
+        private MenuItem _selectedItem;
+        public MenuItem SelectedItem
         {
             get
             {
@@ -51,5 +30,25 @@ namespace XamarinUIMockUp.ViewModels
                 }
             }
         }
+
+        public HomeViewModel(INavigationService navigationService) : base(navigationService)
+        {
+            MenuList = new ObservableCollection<MenuItem>();
+            MenuList.Add(new MenuItem("Iron Man", "\U0001F552 2 hours", "ironmanPoster.jpg"));
+            DetailCommand = new DelegateCommand(OnDetailRequested);
+
+        }
+
+        private void OnDetailRequested()
+        {
+            var parameter = new NavigationParameters();
+            parameter.Add("SelectedItemMenu", SelectedItem);
+            NavigationService.NavigateAsync("DetailPage", parameter);
+            SelectedItem = null;
+        }
+
+        
+        public ObservableCollection<MenuItem> MenuList { get; set; }
+
     }
 }
